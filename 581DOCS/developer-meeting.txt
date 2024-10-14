@@ -1,0 +1,68 @@
+# User Interface Module Meeting - October 8, 2024 8:00 AM
+
+Note: This log was obtained from a public Blender developer meeting for a CSC 581 course assignment.
+
+Regular User Interface module 4 meeting for planning and coordination. Last meeting was September 24th, next meeting during the Blender Conference.
+
+## Attendees
+* Julian Eisel
+* Pablo Vazquez
+* Jonas Holzman
+* Nika Kutsniashvili
+* Harley Acheson
+
+## Merged Since Last Meeting
+* UI: Color Picker layout rework #125675 40
+* UI: Area Docking as Regular Feature, Not Experimental #127810 19
+* UI: Automatically Add Some Tooltip Description Periods #128097 12
+* UI: Editor Edge Highlighting #116684 21
+* UI: Edge Highlighting While Resizing Editors #120998 10
+* Fix #128406: Editor Highlight Edge Roundness #128453 5
+* UI: Fix Editor Highlight Top Bar #128394 6
+* UI: Changes to Docking Mouse Cursors #128396 4
+* Fix #127825: Do Not Clear Recent Item If File Not Found #127882 2
+* Fix #121075: Outliner Ctrl-clicking to toggle selection has speed limit #121130 2
+* Fix #128633: Image gizmo missing update for the Properties Editor #128688 2
+
+## High Severity Bugs
+* Regression: Paint curves are missing in the list #128138 8
+* Regression: Tool icon in toolbar shrinked down #128649 1
+* Blender Crash when dragging window from one Screen to another #128712 1
+
+## Module Roadmap
+* Tabs - there are some mockups 33.
+   * A start. We'll make some full-window mockups next to get a better sense of how the different areas look against each other.
+
+## Review
+* UI: Prevent draggable centered popups from resetting to center. #128522
+   * Interesting. Will evaluate, test, and review.
+* Cleanup: Add missing hyphen to "Addon Tags" label #127822
+   * Approved.
+* Fix #128112: Improve Display of Drag Overlays #128623 1
+   * Approved by Clément. Nice to see this improved.
+* Refactor: Allow any icons for RNA_def_property_ui_icon #127780
+   * Not discussed
+
+## Design & Discussion
+* Discussion on where animation controls could go, separate from current Timeline header. In other editor headers or new footers perhaps. But not in a full-width status bar. Needs more thought.
+* The use of the Blender logo icon in Preferences / Add-ons looks incorrect.
+* Pablo has a PR to add quick access to add-on folder. #128474
+* Conference
+   * We'll do something like a "Blender This Year", mostly highlighting what we've done over the past year (4.0 to present).
+* Some discussion of Expose lock_rotation in the view menu #122185 and Pablo approves.
+* UI Experiment: Operator Preferences on Status Bar #126477 10
+   * Now a more useful demonstration, even doing more than we'd want.
+   * We still like the idea. Julian not liking the inconsistency that the extra items are preferences that change for next invocation. Will try separating these from the rest with a vertical rule and "Preferences: "
+* WIP: UI: Use SVG Icons for Tools #125378 2
+   * Campbell wants design changes, will bring up in Core meetings
+* WIP: UI: Bidirectional Text and Complex Shaping #104662 2
+   * Working okay, minimally invasive, but would require RTL dev support
+   * Not discussed
+* WIP: UI: Icons in ID Search List (Alt) #127086 1
+   * We discussed ways of doing this without passing *ID, but still allowing the user count.
+* WIP: UI: SVG Icons as Mouse Cursors #127326
+   * working now as a proof of concept, rendering 1 & 32 bpp
+   * Harley's won't spend much time on this, but next step is adding more icons and removing the default cursor as the test one shown.
+* WIP: UI: Preferences Search #119072 7
+   * Hans made many changes
+   * Not discussed much as Hans is away.
